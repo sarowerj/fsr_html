@@ -1,0 +1,18 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 31, 2016, 12:56:25 AM
+    Author     : Sarower Jahan
+*/
+
+$base_blue : #0c1c40;
+$base_blue_lt : lighten($base_blue,3.9%);
+$base_blue_lt_hover : lighten($base_blue_lt,5%);
+
+
+header{ 
+    background:lighten($base_blue_lt,5%); 
+}
