@@ -7,7 +7,107 @@ and open the template in the editor.
     Created on : Oct 31, 2016, 12:56:25 AM
     Author     : Sarower Jahan
 */
+/*== Color Variable ==*/
+/*== Font Variable ==*/
+/*========== Global Css ==========*/
+a {
+  color: inherit; }
+  a:hover {
+    text-decoration: none; }
+
+/*== End Global Css==*/
+/*========== Header Start Here ==========*/
 header {
-  background: #132d66; }
+  background: #0f2351;
+  color: white; }
+  header .logo {
+    float: left;
+    max-width: 177px;
+    margin: 10px 0; }
+    header .logo img {
+      margin-left: -6px; }
+  header .office_name {
+    float: left;
+    margin-top: 47px;
+    padding-left: 16px; }
+    header .office_name h1 {
+      margin: 0;
+      font-size: 30px;
+      text-transform: uppercase;
+      font-weight: 400;
+      border-bottom: 1px solid #3d4e74;
+      padding-bottom: 5px; }
+    header .office_name h2 {
+      font-size: 29.5px;
+      margin: 6px 0 0 0;
+      font-family: 'SolaimanLipi'; }
+  header .top_nav_bar {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: "Roboto Condensed", sans-serif;
+    text-align: right;
+    background: #0c1c40; }
+    header .top_nav_bar li {
+      list-style: none;
+      display: inline-block; }
+      header .top_nav_bar li a {
+        display: block;
+        padding: 13px 20px; }
+        header .top_nav_bar li a:hover {
+          color: white;
+          background: #132d66; }
+  header .search_form {
+    margin-top: 37px;
+    background: #233c74;
+    position: relative; }
+    header .search_form input[type="text"] {
+      border: 0;
+      height: 36px;
+      width: 100%;
+      max-width: 250px;
+      background: transparent;
+      padding-left: 10px; }
+      header .search_form input[type="text"]::-webkit-input-placeholder {
+        color: #5972aa; }
+      header .search_form input[type="text"]:focus {
+        outline: none; }
+    header .search_form input[type="submit"] {
+      width: 36px;
+      height: 36px;
+      float: right;
+      border: 0;
+      position: relative;
+      z-index: 2;
+      opacity: 0; }
+    header .search_form .fa-search {
+      position: absolute;
+      right: 0;
+      top: 0px;
+      width: 36px;
+      height: 36px;
+      text-align: center;
+      padding: 10px; }
+    header .search_form .fa-caret-down {
+      width: 36px;
+      height: 36px;
+      padding: 10px;
+      text-align: center;
+      float: right;
+      cursor: pointer; }
+  header .navbar {
+    border-radius: 0;
+    border: 0;
+    background: #0c1c40; }
+    header .navbar .nav li a {
+      color: white; }
+      header .navbar .nav li a:hover {
+        background: #132d66;
+        color: white; }
+    header .navbar .nav li.active a {
+      background: #132d66;
+      color: white; }
+
+/*== Header End ==*/
 
 /*# sourceMappingURL=style.css.map */

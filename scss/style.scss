@@ -8,11 +8,142 @@ and open the template in the editor.
     Author     : Sarower Jahan
 */
 
+/*== Color Variable ==*/
 $base_blue : #0c1c40;
 $base_blue_lt : lighten($base_blue,3.9%);
 $base_blue_lt_hover : lighten($base_blue_lt,5%);
 
 
-header{ 
-    background:lighten($base_blue_lt,5%); 
+/*== Font Variable ==*/
+$roboto : 'Roboto', sans-serif;
+$roboto_con : 'Roboto Condensed', sans-serif;
+
+/*========== Global Css ==========*/
+a{
+    color:inherit;
+    &:hover{
+        text-decoration: none;
+    }
 }
+/*== End Global Css==*/
+/*========== Header Start Here ==========*/
+header{ 
+    background:$base_blue_lt;
+    color:white;
+    .logo{
+        float:left;
+        max-width:177px;
+        margin:10px 0;
+        img{
+            margin-left:-6px;
+        }
+    }
+    .office_name{
+        float:left;
+        margin-top: 47px;
+        padding-left: 16px;
+        h1{
+            margin:0;
+            font-size:30px;
+            text-transform: uppercase;
+            font-weight: 400;
+            border-bottom: 1px solid #3d4e74;
+            padding-bottom:5px;
+        }
+        h2{
+            font-size:29.5px;
+            margin:6px 0 0 0;
+            font-family: 'SolaimanLipi';
+        }
+    }
+
+    .top_nav_bar{
+        margin:0;
+        padding:0;
+        font-size:16px;
+        font-family:$roboto_con;
+        text-align:right;
+        background:$base_blue;
+        li{
+            list-style: none;
+            display: inline-block;
+            a{
+                display:block;
+                padding:13px 20px;
+                &:hover{
+                    color:white;
+                    background:$base_blue_lt_hover;
+                }
+            }
+        }
+    }
+
+    .search_form{
+        margin-top: 37px;
+        background:#233c74;
+        position:relative;
+        input[type="text"]{
+            border:0;
+            height:36px;
+            width:100%;
+            max-width: 250px;
+            background:transparent;
+            padding-left:10px;
+            &::-webkit-input-placeholder {
+                color: #5972aa;
+            }
+            &:focus{
+                outline:none;
+            }
+        }
+        input[type="submit"]{
+            width:36px;
+            height:36px;
+            float:right;
+            border:0;
+            position:relative;
+            z-index: 2;
+            opacity:0;
+        }
+        .fa-search{
+            position: absolute;
+            right: 0;
+            top:0px;
+            width:36px;
+            height:36px;
+            text-align: center;
+            padding:10px;
+        }
+        .fa-caret-down{
+            width:36px;
+            height:36px;
+            padding:10px;
+            text-align: center;
+            float:right;
+            cursor: pointer;
+        }
+    }
+
+    .navbar{
+        border-radius: 0;
+        border:0;
+        background:$base_blue;
+        .nav{
+            li{
+                a{
+                    color:white;
+                    &:hover{
+                        background:$base_blue_lt_hover;
+                        color:white;
+                    }
+                }
+                &.active{
+                    a{
+                        background:$base_blue_lt_hover;
+                        color:white;
+                    }
+                }
+            }
+        }
+    }
+}/*== Header End ==*/

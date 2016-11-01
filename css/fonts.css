@@ -1,0 +1,17 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 2, 2016, 12:20:07 AM
+    Author     : Sarower Jahan
+*/
+
+/*========== Solaiman Lipi Font ==========*/
+@font-face {
+    font-family: 'SolaimanLipi';
+    src:url('../fonts/solaiman-lipi.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}/*== End Solaiman Lipi Font ==*/
