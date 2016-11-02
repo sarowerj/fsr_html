@@ -21,7 +21,6 @@ $roboto_con : 'Roboto Condensed', sans-serif;
 
 /*== Extend ==*/
 .focus_nav_item{
-
     background:$base_color_lt_hover;
     color:white;
     border-right:1px solid #182951;
@@ -38,6 +37,11 @@ $roboto_con : 'Roboto Condensed', sans-serif;
 }
 
 /*========== Global Css ==========*/
+body{
+    font-family: $roboto;
+    font-size:14px;
+    line-height: 21px;
+}
 a{
     color:inherit;
     &:hover{
@@ -57,6 +61,22 @@ a{
             color:white;
         }
     }
+}
+h1{
+    font-family: $roboto;
+    text-transform: uppercase;
+    font-weight: 700;
+    color:$base_color;
+    font-size:30px;
+}
+.section{
+    padding:70px 0;
+    .title{
+        margin:0;
+    }
+}
+p{
+    color:#333333;
 }
 /*== End Global Css==*/
 /*========== Header Start Here ==========*/
@@ -156,64 +176,70 @@ header{
             cursor: pointer;
         }
     }
+}/*== Header End ==*/
 
-    .navbar{
-        border-radius: 0;
-        border:0;
-        background:$base_color;
-        font-family:$roboto_con;
-        margin-bottom:0;
-        .nav{
-            border-right:1px solid #2d4478;
-            >li{
-                >a{
-                    padding: 15px 29px;
+
+
+/*========== Navbar Start ==========*/
+.navbar{
+    border-radius: 0;
+    border:0;
+    background:$base_color;
+    font-family:$roboto_con;
+    margin-bottom:0;
+    &.navbar_light{
+        background:$base_color_lt;
+    }
+    .nav{
+        border-right:1px solid #2d4478;
+        >li{
+            >a{
+                padding: 15px 29px;
+                color:white;
+                border-right:1px solid #182951;
+                border-left:1px solid #2d4478;
+                &:hover{
+                    background:$base_color_lt_hover;
                     color:white;
-                    border-right:1px solid #182951;
-                    border-left:1px solid #2d4478;
+                }
+            }
+            &.active{
+                a{
+                    background:$base_color_lt_hover;
+                    color:white;
                     &:hover{
-                        background:$base_color_lt_hover;
-                        color:white;
-                    }
-                }
-                &.active{
-                    a{
-                        background:$base_color_lt_hover;
-                        color:white;
-                        &:hover{
-                            @extend .focus_nav_item;
-                        }
-                    }
-                }
-                &.open{
-                    >a{
                         @extend .focus_nav_item;
-                        &:focus{
-                            @extend .focus_nav_item;
-                        }
                     }
                 }
             }
-            li{
-                a{
-                    @include transition(all, .25s);
+            &.open{
+                >a{
+                    @extend .focus_nav_item;
                     &:focus{
                         @extend .focus_nav_item;
                     }
                 }
-                &.dropdown {
-                    .dropdown-menu{
-                        border-radius: 0;
-                        padding-bottom: 0;
-                        background: $base_color_lt_hover;
-                        li{
-                            a{
+            }
+        }
+        li{
+            a{
+                @include transition(all, .25s);
+                &:focus{
+                    @extend .focus_nav_item;
+                }
+            }
+            &.dropdown {
+                .dropdown-menu{
+                    border-radius: 0;
+                    padding-bottom: 0;
+                    background: $base_color_lt_hover;
+                    li{
+                        a{
+                            color:white;
+                            padding:10px 15px;
+                            &:hover{
+                                background:$base_color_lt;
                                 color:white;
-                                padding:10px 15px;
-                                &:hover{
-                                    background:$base_color_lt;
-                                    color:white;
-                                }
                             }
                         }
                     }
@@ -221,7 +247,7 @@ header{
             }
         }
     }
-}/*== Header End ==*/
+}/*== End Navbar ==*/
 
 
 
@@ -299,6 +325,72 @@ header{
                 &.active{
                     background:$base_color;
                 }
+            }
+        }
+    }
+}/*== End Slider ==*/
+
+
+
+
+/*========== Welcome Message ==========*/
+.welcome_text{
+    text-align: center;
+    p{
+        max-width: 780px;
+        margin: 10px auto 0;
+        color: #292929;
+    }
+}/*== End Welcome Message ==*/
+
+
+
+
+/*========== Services Section ==========*/
+.services{
+    background:#f2f2f2;
+    padding-bottom:40px;
+    .item{
+        background:white;
+        text-align:center;
+        padding:30px;
+        border-right:2px solid #dfdfdf;
+        border-bottom:2px solid #dfdfdf;
+        margin-bottom:30px;
+        @include transition(all,2s);
+        .icon{
+            width:100px;
+            height:100px;
+            border-radius:50%;
+            display: table;
+            margin:auto;
+            background: #c5d3eb;
+            background: -moz-radial-gradient(center, ellipse cover,  #FFFFFF 0%, #c5d3eb 100%);
+            background: -webkit-radial-gradient(center, ellipse cover,  #FFFFFF 0%,#c5d3eb 100%);
+            background: radial-gradient(ellipse at center,  #FFFFFF 0%,#c5d3eb 100%);
+            border:1px solid #a0b4d7;
+            @include transition(all,2s);
+        }
+        h3{
+            margin:14px 0 0 0;
+            color:$base_color;
+            font-family: $roboto_con;
+            font-size:22px;
+            font-weight: 700;
+        }
+        p{
+            margin-bottom:0;
+            a{
+                color:$base_color;
+                text-decoration: none;
+                font-weight: 700;
+            }
+        }
+        &:hover{
+            .icon{
+                background: -moz-radial-gradient(center, ellipse cover,  #FFFFFF 0%, #c5d3eb 00%);
+                background: -webkit-radial-gradient(center, ellipse cover,  #FFFFFF 0%,#c5d3eb 0%);
+                background: radial-gradient(ellipse at center,  #FFFFFF 0%,#c5d3eb 00%);
             }
         }
     }

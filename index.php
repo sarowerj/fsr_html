@@ -66,7 +66,7 @@
                 <div class="container">
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main_nav" data-aria-expanded="false">
                             <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
@@ -75,7 +75,7 @@
                     </div>
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <div class="collapse navbar-collapse" id="main_nav">
                         <ul class="nav navbar-nav">
                             <li class="active"><a href="#">Home</a></li>
                             <li><a href="#">Individuals</a></li>
@@ -85,7 +85,7 @@
                             <li><a href="#">Licenses & Certificates</a></li>
                             <li><a href="#">Training & Testing</a></li>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-role="button" aria-haspopup="true" aria-expanded="false">About FSR</a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-role="button" aria-haspopup="true" data-aria-expanded="false">About FSR</a>
                                 <ul class="dropdown-menu">
                                     <li><a href="#">Action</a></li>
                                     <li><a href="#">Another action</a></li>
@@ -93,12 +93,15 @@
                                 </ul>
                             </li>
                         </ul>
-                    </div><!-- /.navbar-collapse -->
-                </div><!-- /.container-fluid -->
-            </nav>
+                    </div>
+                </div>
+            </nav><!-- End 1st Navbar-->
         </header><!-- End Header-->
 
 
+        <!-- Start Main Content -->
+    <main>
+        <!-- Slider Start-->
         <div class="slider">
             <div id="carousel-example-generic" class="carousel slide carousel-fade" data-ride="carousel">
                 <!-- Indicators -->
@@ -135,10 +138,204 @@
                     </div>
                 </div>
             </div>
+        </div><!-- End Slider-->
+
+        <!-- Start 2nd Navbar-->
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main_nav_2">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+                <div class="collapse navbar-collapse" id="main_nav_2">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Individuals</a></li>
+                        <li><a href="#">Operations</a></li>
+                        <li><a href="#">Airworthiness</a></li>
+                        <li><a href="#">Regulations & Policy</a></li>
+                        <li><a href="#">Licenses & Certificates</a></li>
+                        <li><a href="#">Training & Testing</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-role="button" aria-haspopup="true" aria-expanded="false">About FSR</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav><!-- End 2nd Navbar-->
+
+        <!-- Start 3rd Navbar-->
+        <nav class="navbar navbar-default navbar_light">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main_nav_3" data-aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+                <div class="collapse navbar-collapse" id="main_nav_3">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Individuals</a></li>
+                        <li><a href="#">Operations</a></li>
+                        <li><a href="#">Airworthiness</a></li>
+                        <li><a href="#">Regulations & Policy</a></li>
+                        <li><a href="#">Licenses & Certificates</a></li>
+                        <li><a href="#">Training & Testing</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-role="button" aria-haspopup="true" data-aria-expanded="false">About FSR</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav><!-- End 3rd Navbar-->
+
+
+        <!-- Welcome Text -->
+        <div class="section welcome_text">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h1 class="title">Welcome to Civil Aviation Bangladesh</h1>
+                        <p>Civil Aviation Authority, Bangladesh (CAAB) functions as the regulatory body for all aviation related activities in Bangladesh.<br /> 
+                            it is also the aeronautical service provider and is responsible for safe, expeditious and efficient flow <br />
+                            of air traffic within the Flight Information Region (FIR) bounded by the International geographic <br />
+                            boundary of Bangladesh. This organization is the custodian of all airfields and<br />
+                            allied facilities including air navigation facilities.</p>
+                        <p class="btn_cont">
+                            <a href="#" class="details">Read More</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div><!-- End Welcome -->
+
+
+        <!-- Services -->
+        <div class="section services">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="item">
+                            <div class="icon">
+                                <img src="images/icon_introduction.png" alt="" />
+                            </div>
+                            <h3>Introduction: TOC</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur <br />
+                                elit, sed do eiusmod tempor incididunt <br />
+                                ut labore et dolore magna 
+                            </p>
+                            <p class="btn_cont">
+                                <a href="#" class="details">Details</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="item">
+                            <div class="icon">
+                                <img src="images/icon_introduction.png" alt="" />
+                            </div>
+                            <h3>Introduction: TOC</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur <br />
+                                elit, sed do eiusmod tempor incididunt <br />
+                                ut labore et dolore magna 
+                            </p>
+                            <p class="btn_cont">
+                                <a href="#" class="details">Details</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="item">
+                            <div class="icon">
+                                <img src="images/icon_introduction.png" alt="" />
+                            </div>
+                            <h3>Introduction: TOC</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur <br />
+                                elit, sed do eiusmod tempor incididunt <br />
+                                ut labore et dolore magna 
+                            </p>
+                            <p class="btn_cont">
+                                <a href="#" class="details">Details</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="item">
+                            <div class="icon">
+                                <img src="images/icon_introduction.png" alt="" />
+                            </div>
+                            <h3>Introduction: TOC</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur <br />
+                                elit, sed do eiusmod tempor incididunt <br />
+                                ut labore et dolore magna 
+                            </p>
+                            <p class="btn_cont">
+                                <a href="#" class="details">Details</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="item">
+                            <div class="icon">
+                                <img src="images/icon_introduction.png" alt="" />
+                            </div>
+                            <h3>Introduction: TOC</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur <br />
+                                elit, sed do eiusmod tempor incididunt <br />
+                                ut labore et dolore magna 
+                            </p>
+                            <p class="btn_cont">
+                                <a href="#" class="details">Details</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="item">
+                            <div class="icon">
+                                <img src="images/icon_introduction.png" alt="" />
+                            </div>
+                            <h3>Introduction: TOC</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur <br />
+                                elit, sed do eiusmod tempor incididunt <br />
+                                ut labore et dolore magna 
+                            </p>
+                            <p class="btn_cont">
+                                <a href="#" class="details">Details</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+        <!-- End Services -->
 
 
-        <!-- Bootstrap JS v3.3.7-->
-        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    </body>
+
+    </main><!-- End Main Content-->
+
+
+    <!-- Bootstrap JS v3.3.7-->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
 </html>
