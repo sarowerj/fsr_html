@@ -9,14 +9,33 @@ and open the template in the editor.
 */
 
 /*== Color Variable ==*/
-$base_blue : #0c1c40;
-$base_blue_lt : lighten($base_blue,3.9%);
-$base_blue_lt_hover : lighten($base_blue_lt,5%);
+$base_color : #0c1c40;
+$base_color_lt : lighten($base_color,3.9%);
+$base_color_lt_hover : lighten($base_color_lt,5%);
 
 
 /*== Font Variable ==*/
 $roboto : 'Roboto', sans-serif;
 $roboto_con : 'Roboto Condensed', sans-serif;
+
+
+/*== Extend ==*/
+.focus_nav_item{
+
+    background:$base_color_lt_hover;
+    color:white;
+    border-right:1px solid #182951;
+    border-left:1px solid #2d4478;
+}
+
+/*== Mixins ==*/
+@mixin transition($property,$duration){
+    -webkit-transition:$property $duration;
+    -moz-transition:$property $duration;
+    -ms-transition:$property $duration;
+    -o-transition:$property $duration;
+    transition:$property $duration;
+}
 
 /*========== Global Css ==========*/
 a{
@@ -25,10 +44,24 @@ a{
         text-decoration: none;
     }
 }
+.btn{
+    padding:9px 40px;
+    text-transform:uppercase;
+    border-radius:0;
+    letter-spacing: 1px;
+    &.btn_base_color{
+        background:$base_color;
+        @include transition(all,.25s);
+        &:hover,&:focus{
+            background:$base_color_lt_hover;
+            color:white;
+        }
+    }
+}
 /*== End Global Css==*/
 /*========== Header Start Here ==========*/
 header{ 
-    background:$base_blue_lt;
+    background:$base_color_lt;
     color:white;
     .logo{
         float:left;
@@ -63,7 +96,7 @@ header{
         font-size:16px;
         font-family:$roboto_con;
         text-align:right;
-        background:$base_blue;
+        background:$base_color;
         li{
             list-style: none;
             display: inline-block;
@@ -72,7 +105,7 @@ header{
                 padding:13px 20px;
                 &:hover{
                     color:white;
-                    background:$base_blue_lt_hover;
+                    background:$base_color_lt_hover;
                 }
             }
         }
@@ -127,23 +160,146 @@ header{
     .navbar{
         border-radius: 0;
         border:0;
-        background:$base_blue;
+        background:$base_color;
+        font-family:$roboto_con;
+        margin-bottom:0;
         .nav{
-            li{
-                a{
+            border-right:1px solid #2d4478;
+            >li{
+                >a{
+                    padding: 15px 29px;
                     color:white;
+                    border-right:1px solid #182951;
+                    border-left:1px solid #2d4478;
                     &:hover{
-                        background:$base_blue_lt_hover;
+                        background:$base_color_lt_hover;
                         color:white;
                     }
                 }
                 &.active{
                     a{
-                        background:$base_blue_lt_hover;
+                        background:$base_color_lt_hover;
                         color:white;
+                        &:hover{
+                            @extend .focus_nav_item;
+                        }
+                    }
+                }
+                &.open{
+                    >a{
+                        @extend .focus_nav_item;
+                        &:focus{
+                            @extend .focus_nav_item;
+                        }
+                    }
+                }
+            }
+            li{
+                a{
+                    @include transition(all, .25s);
+                    &:focus{
+                        @extend .focus_nav_item;
+                    }
+                }
+                &.dropdown {
+                    .dropdown-menu{
+                        border-radius: 0;
+                        padding-bottom: 0;
+                        background: $base_color_lt_hover;
+                        li{
+                            a{
+                                color:white;
+                                padding:10px 15px;
+                                &:hover{
+                                    background:$base_color_lt;
+                                    color:white;
+                                }
+                            }
+                        }
                     }
                 }
             }
         }
     }
 }/*== Header End ==*/
+
+
+
+
+/*========== Home Slider ==========*/
+.slider{
+    .carousel-fade {
+        .carousel-inner {
+            .item {
+                transition-property: opacity;
+            }
+
+            .item,
+            .active.left,
+            .active.right {
+                opacity: 0;
+            }
+
+            .active,
+            .next.left,
+            .prev.right {
+                opacity: 1;
+            }
+
+            .next,
+            .prev,
+            .active.left,
+            .active.right {
+                left: 0;
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+        .carousel-control {
+            z-index: 2;
+        }
+    }
+    .carousel{
+        .carousel-inner{
+            .item{
+                .carousel-caption{
+                    text-shadow:none;
+                    right: 0%;
+                    left: 0%;
+                    padding-bottom: 30px;
+                    max-width: 860px;
+                    margin: auto;
+                    .text{
+                        background:rgba(15,35,80,.5);
+                        padding:15px;
+                        margin:0 0 20px 0;
+                        h3{
+                            margin:0;
+                            font-weight: 700;
+                            text-transform: uppercase;
+                        }
+                        h5{
+                            font-size:20px;
+                            text-transform: uppercase;
+                            font-weight: 400;
+                            margin:10px 0 0 0;
+                            font-family: $roboto;
+                        }
+                    }
+                    .btn_cont{
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+        .carousel-indicators{
+            li{
+                border-color:$base_color;
+                @include transition(all,.25s);
+                &.active{
+                    background:$base_color;
+                }
+            }
+        }
+    }
+}

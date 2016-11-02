@@ -9,11 +9,35 @@ and open the template in the editor.
 */
 /*== Color Variable ==*/
 /*== Font Variable ==*/
+/*== Extend ==*/
+.focus_nav_item, header .navbar .nav > li.active a:hover, header .navbar .nav > li.open > a, header .navbar .nav > li.open > a:focus, header .navbar .nav li a:focus {
+  background: #132d66;
+  color: white;
+  border-right: 1px solid #182951;
+  border-left: 1px solid #2d4478; }
+
+/*== Mixins ==*/
 /*========== Global Css ==========*/
 a {
   color: inherit; }
   a:hover {
     text-decoration: none; }
+
+.btn {
+  padding: 9px 40px;
+  text-transform: uppercase;
+  border-radius: 0;
+  letter-spacing: 1px; }
+  .btn.btn_base_color {
+    background: #0c1c40;
+    -webkit-transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    -ms-transition: all 0.25s;
+    -o-transition: all 0.25s;
+    transition: all 0.25s; }
+    .btn.btn_base_color:hover, .btn.btn_base_color:focus {
+      background: #132d66;
+      color: white; }
 
 /*== End Global Css==*/
 /*========== Header Start Here ==========*/
@@ -98,16 +122,90 @@ header {
   header .navbar {
     border-radius: 0;
     border: 0;
-    background: #0c1c40; }
-    header .navbar .nav li a {
-      color: white; }
-      header .navbar .nav li a:hover {
+    background: #0c1c40;
+    font-family: "Roboto Condensed", sans-serif;
+    margin-bottom: 0; }
+    header .navbar .nav {
+      border-right: 1px solid #2d4478; }
+      header .navbar .nav > li > a {
+        padding: 15px 29px;
+        color: white;
+        border-right: 1px solid #182951;
+        border-left: 1px solid #2d4478; }
+        header .navbar .nav > li > a:hover {
+          background: #132d66;
+          color: white; }
+      header .navbar .nav > li.active a {
         background: #132d66;
         color: white; }
-    header .navbar .nav li.active a {
-      background: #132d66;
-      color: white; }
+      header .navbar .nav li a {
+        -webkit-transition: all 0.25s;
+        -moz-transition: all 0.25s;
+        -ms-transition: all 0.25s;
+        -o-transition: all 0.25s;
+        transition: all 0.25s; }
+      header .navbar .nav li.dropdown .dropdown-menu {
+        border-radius: 0;
+        padding-bottom: 0;
+        background: #132d66; }
+        header .navbar .nav li.dropdown .dropdown-menu li a {
+          color: white;
+          padding: 10px 15px; }
+          header .navbar .nav li.dropdown .dropdown-menu li a:hover {
+            background: #0f2351;
+            color: white; }
 
 /*== Header End ==*/
+/*========== Home Slider ==========*/
+.slider .carousel-fade .carousel-inner .item {
+  transition-property: opacity; }
+.slider .carousel-fade .carousel-inner .item,
+.slider .carousel-fade .carousel-inner .active.left,
+.slider .carousel-fade .carousel-inner .active.right {
+  opacity: 0; }
+.slider .carousel-fade .carousel-inner .active,
+.slider .carousel-fade .carousel-inner .next.left,
+.slider .carousel-fade .carousel-inner .prev.right {
+  opacity: 1; }
+.slider .carousel-fade .carousel-inner .next,
+.slider .carousel-fade .carousel-inner .prev,
+.slider .carousel-fade .carousel-inner .active.left,
+.slider .carousel-fade .carousel-inner .active.right {
+  left: 0;
+  transform: translate3d(0, 0, 0); }
+.slider .carousel-fade .carousel-control {
+  z-index: 2; }
+.slider .carousel .carousel-inner .item .carousel-caption {
+  text-shadow: none;
+  right: 0%;
+  left: 0%;
+  padding-bottom: 30px;
+  max-width: 860px;
+  margin: auto; }
+  .slider .carousel .carousel-inner .item .carousel-caption .text {
+    background: rgba(15, 35, 80, 0.5);
+    padding: 15px;
+    margin: 0 0 20px 0; }
+    .slider .carousel .carousel-inner .item .carousel-caption .text h3 {
+      margin: 0;
+      font-weight: 700;
+      text-transform: uppercase; }
+    .slider .carousel .carousel-inner .item .carousel-caption .text h5 {
+      font-size: 20px;
+      text-transform: uppercase;
+      font-weight: 400;
+      margin: 10px 0 0 0;
+      font-family: "Roboto", sans-serif; }
+  .slider .carousel .carousel-inner .item .carousel-caption .btn_cont {
+    margin-bottom: 20px; }
+.slider .carousel .carousel-indicators li {
+  border-color: #0c1c40;
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -ms-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s; }
+  .slider .carousel .carousel-indicators li.active {
+    background: #0c1c40; }
 
 /*# sourceMappingURL=style.css.map */

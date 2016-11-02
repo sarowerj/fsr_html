@@ -77,38 +77,65 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
-                            <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-                            <li><a href="#">Link</a></li>
+                            <li class="active"><a href="#">Home</a></li>
+                            <li><a href="#">Individuals</a></li>
+                            <li><a href="#">Operations</a></li>
+                            <li><a href="#">Airworthiness</a></li>
+                            <li><a href="#">Regulations & Policy</a></li>
+                            <li><a href="#">Licenses & Certificates</a></li>
+                            <li><a href="#">Training & Testing</a></li>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-role="button" aria-haspopup="true" aria-expanded="false">About FSR</a>
                                 <ul class="dropdown-menu">
                                     <li><a href="#">Action</a></li>
                                     <li><a href="#">Another action</a></li>
                                     <li><a href="#">Something else here</a></li>
-                                    <li role="separator" class="divider"></li>
-                                    <li><a href="#">Separated link</a></li>
-                                    <li role="separator" class="divider"></li>
-                                    <li><a href="#">One more separated link</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <ul class="nav navbar-nav navbar-right">
-                            <li><a href="#">Link</a></li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Action</a></li>
-                                    <li><a href="#">Another action</a></li>
-                                    <li><a href="#">Something else here</a></li>
-                                    <li role="separator" class="divider"></li>
-                                    <li><a href="#">Separated link</a></li>
                                 </ul>
                             </li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
             </nav>
-        </header>
+        </header><!-- End Header-->
+
+
+        <div class="slider">
+            <div id="carousel-example-generic" class="carousel slide carousel-fade" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img src="images/slider_bg_1.jpg" alt="...">
+                        <div class="carousel-caption">
+                            <div class="text">
+                                <h3>Fatigue rule transition period extended by 12 months</h3>
+                                <h5>Find out more including how this will affect your operation</h5>
+                            </div>
+                            <div class="btn_cont">
+                                <a href="#" class="btn btn_base_color">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="images/slider_bg_2.jpg" alt="...">
+                        <div class="carousel-caption">
+                            <div class="text">
+                                <h3>Next slider text will come here.</h3>
+                                <h5>Few description will come here for this slide.</h5>
+                            </div>
+                            <div class="btn_cont">
+                                <a href="#" class="btn btn_base_color">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
         <!-- Bootstrap JS v3.3.7-->
