@@ -85,6 +85,9 @@ h1{
 p{
     color:#333333;
 }
+.sj{
+    opacity: 0;
+}
 .form-control{
     border-radius: 0;
 }/*== End Global Css==*/
@@ -470,8 +473,10 @@ footer{
     color:#87a2be;
     .footer_top{
         border-bottom: 1px solid #000e1b;
-        padding:70px 0 70px 0;
+        padding:70px 0 40px 0;
         .item{
+            margin-bottom:30px;
+            min-height:250px;
             h3{
                 margin: 0 0 10px 0;
                 font-size: 22px;
@@ -590,5 +595,50 @@ footer{
                 text-align:right;
             }
         }
+    }
+}/*== End Footer ==*/
+
+
+
+/*========= Responsive Css ==========*/
+@media screen and (max-width:1199px){
+    .welcome_text{
+        .content{
+            br{
+                display:none;
+            }
+        }
+    }
+    .services{
+        .item{
+            br{
+                display:none;
+            }
+        }
+    }
+}
+@media screen and (max-width:570px){
+    h1{
+        font-size:22px;
+    }
+    .full_570{
+        width:100%;
+    }
+    footer{
+        .footer_last{
+            .copy_message{
+                text-align: center;
+            }
+            .social_icons{
+                ul{
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:480px){
+    .full_480{
+        width:100%;
     }
 }

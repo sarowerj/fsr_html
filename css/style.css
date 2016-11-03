@@ -59,6 +59,9 @@ h1 {
 p {
   color: #333333; }
 
+.sj {
+  opacity: 0; }
+
 .form-control {
   border-radius: 0; }
 
@@ -347,90 +350,93 @@ footer {
   color: #87a2be; }
   footer .footer_top {
     border-bottom: 1px solid #000e1b;
-    padding: 70px 0 70px 0; }
-    footer .footer_top .item h3 {
-      margin: 0 0 10px 0;
-      font-size: 22px;
-      color: #a5afba;
-      padding-bottom: 5px;
-      border-bottom: 1px solid #092949; }
-    footer .footer_top .item ul {
-      padding: 0; }
-      footer .footer_top .item ul li {
-        list-style: none; }
-        footer .footer_top .item ul li a {
-          -webkit-transition: all 0.25s;
-          -moz-transition: all 0.25s;
-          -ms-transition: all 0.25s;
-          -o-transition: all 0.25s;
-          transition: all 0.25s; }
-          footer .footer_top .item ul li a:hover {
-            color: white; }
-    footer .footer_top .item.site_info {
-      line-height: 23px; }
-    footer .footer_top .item.contact_us ul li {
-      line-height: 20px;
-      margin-bottom: 10px;
-      padding: 0 0 0 90px;
-      position: relative; }
-      footer .footer_top .item.contact_us ul li .fa {
-        position: absolute;
-        left: 0;
-        top: 0;
-        padding-top: 1px;
-        width: 20px;
-        height: 20px; }
-        footer .footer_top .item.contact_us ul li .fa.fa-mobile {
-          font-size: 21px;
-          top: -2px; }
-        footer .footer_top .item.contact_us ul li .fa.fa-fax {
-          font-size: 12px; }
-        footer .footer_top .item.contact_us ul li .fa.fa-envelope {
-          font-size: 12px;
-          top: 2px; }
-      footer .footer_top .item.contact_us ul li .title {
-        position: absolute;
-        left: 15px;
-        top: 0;
-        width: 70px;
-        height: 30px;
-        font-weight: 700; }
-        footer .footer_top .item.contact_us ul li .title::after {
-          content: ':';
-          right: -3px;
-          position: absolute; }
-    footer .footer_top .item.notice_board {
-      text-align: justify; }
-      footer .footer_top .item.notice_board ul li {
+    padding: 70px 0 40px 0; }
+    footer .footer_top .item {
+      margin-bottom: 30px;
+      min-height: 250px; }
+      footer .footer_top .item h3 {
+        margin: 0 0 10px 0;
+        font-size: 22px;
+        color: #a5afba;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #092949; }
+      footer .footer_top .item ul {
+        padding: 0; }
+        footer .footer_top .item ul li {
+          list-style: none; }
+          footer .footer_top .item ul li a {
+            -webkit-transition: all 0.25s;
+            -moz-transition: all 0.25s;
+            -ms-transition: all 0.25s;
+            -o-transition: all 0.25s;
+            transition: all 0.25s; }
+            footer .footer_top .item ul li a:hover {
+              color: white; }
+      footer .footer_top .item.site_info {
+        line-height: 23px; }
+      footer .footer_top .item.contact_us ul li {
+        line-height: 20px;
         margin-bottom: 10px;
-        line-height: 18px; }
-        footer .footer_top .item.notice_board ul li a {
+        padding: 0 0 0 90px;
+        position: relative; }
+        footer .footer_top .item.contact_us ul li .fa {
+          position: absolute;
+          left: 0;
+          top: 0;
+          padding-top: 1px;
+          width: 20px;
+          height: 20px; }
+          footer .footer_top .item.contact_us ul li .fa.fa-mobile {
+            font-size: 21px;
+            top: -2px; }
+          footer .footer_top .item.contact_us ul li .fa.fa-fax {
+            font-size: 12px; }
+          footer .footer_top .item.contact_us ul li .fa.fa-envelope {
+            font-size: 12px;
+            top: 2px; }
+        footer .footer_top .item.contact_us ul li .title {
+          position: absolute;
+          left: 15px;
+          top: 0;
+          width: 70px;
+          height: 30px;
           font-weight: 700; }
-    footer .footer_top .item.emergency_contact .form-control {
-      background: #07233f;
-      border: 1px solid #0b2f53;
-      box-shadow: 1px 1px 0px #001225;
-      -webkit-transition: all 0.25s;
-      -moz-transition: all 0.25s;
-      -ms-transition: all 0.25s;
-      -o-transition: all 0.25s;
-      transition: all 0.25s; }
-      footer .footer_top .item.emergency_contact .form-control::-webkit-input-placeholder {
-        color: #87a2be; }
-      footer .footer_top .item.emergency_contact .form-control:focus {
-        background: #0b2f53; }
-    footer .footer_top .item.emergency_contact .btn-primary {
-      height: 36px;
-      background: #0b2f53;
-      border: 1px solid #0c457e;
-      -webkit-transition: all 0.25s;
-      -moz-transition: all 0.25s;
-      -ms-transition: all 0.25s;
-      -o-transition: all 0.25s;
-      transition: all 0.25s;
-      color: white; }
-      footer .footer_top .item.emergency_contact .btn-primary:hover {
-        background: #0c457e; }
+          footer .footer_top .item.contact_us ul li .title::after {
+            content: ':';
+            right: -3px;
+            position: absolute; }
+      footer .footer_top .item.notice_board {
+        text-align: justify; }
+        footer .footer_top .item.notice_board ul li {
+          margin-bottom: 10px;
+          line-height: 18px; }
+          footer .footer_top .item.notice_board ul li a {
+            font-weight: 700; }
+      footer .footer_top .item.emergency_contact .form-control {
+        background: #07233f;
+        border: 1px solid #0b2f53;
+        box-shadow: 1px 1px 0px #001225;
+        -webkit-transition: all 0.25s;
+        -moz-transition: all 0.25s;
+        -ms-transition: all 0.25s;
+        -o-transition: all 0.25s;
+        transition: all 0.25s; }
+        footer .footer_top .item.emergency_contact .form-control::-webkit-input-placeholder {
+          color: #87a2be; }
+        footer .footer_top .item.emergency_contact .form-control:focus {
+          background: #0b2f53; }
+      footer .footer_top .item.emergency_contact .btn-primary {
+        height: 36px;
+        background: #0b2f53;
+        border: 1px solid #0c457e;
+        -webkit-transition: all 0.25s;
+        -moz-transition: all 0.25s;
+        -ms-transition: all 0.25s;
+        -o-transition: all 0.25s;
+        transition: all 0.25s;
+        color: white; }
+        footer .footer_top .item.emergency_contact .btn-primary:hover {
+          background: #0c457e; }
   footer .footer_last {
     background: #001224;
     border-top: 1px solid #012242;
@@ -442,5 +448,28 @@ footer {
       margin: 10px 0; }
       footer .footer_last .social_icons ul {
         text-align: right; }
+
+/*== End Footer ==*/
+/*========= Responsive Css ==========*/
+@media screen and (max-width: 1199px) {
+  .welcome_text .content br {
+    display: none; }
+
+  .services .item br {
+    display: none; } }
+@media screen and (max-width: 570px) {
+  h1 {
+    font-size: 22px; }
+
+  .full_570 {
+    width: 100%; }
+
+  footer .footer_last .copy_message {
+    text-align: center; }
+  footer .footer_last .social_icons ul {
+    text-align: center; } }
+@media screen and (max-width: 480px) {
+  .full_480 {
+    width: 100%; } }
 
 /*# sourceMappingURL=style.css.map */

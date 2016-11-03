@@ -10,8 +10,11 @@
         <!-- Bootstrap CSS v3.3.7 -->
         <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
+        <!-- Animate Css-->
+        <link rel="stylesheet" href="css/animate.css" />
+
         <!-- jQuery v3.1.1 -->
-        <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script> 
+        <script type="text/javascript" src="bower_components/jQuery/dist/jquery.min.js"></script> 
 
         <!-- Including Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
@@ -27,6 +30,7 @@
         <![endif]-->
     </head>
     <body>
+        <!-- Header Start Here -->
         <header>
             <div class="container">
                 <div class="row">
@@ -216,15 +220,17 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
-                        <h1 class="title">Welcome to Civil Aviation Bangladesh</h1>
-                        <p>Civil Aviation Authority, Bangladesh (CAAB) functions as the regulatory body for all aviation related activities in Bangladesh.<br /> 
-                            it is also the aeronautical service provider and is responsible for safe, expeditious and efficient flow <br />
-                            of air traffic within the Flight Information Region (FIR) bounded by the International geographic <br />
-                            boundary of Bangladesh. This organization is the custodian of all airfields and<br />
-                            allied facilities including air navigation facilities.</p>
-                        <p class="btn_cont">
-                            <a href="#" class="details">Read More</a>
-                        </p>
+                        <div class="content sj" data-animate="fadeIn" data-animation-delay="700">
+                            <h1 class="title">Welcome to Civil Aviation Bangladesh</h1>
+                            <p>Civil Aviation Authority, Bangladesh (CAAB) functions as the regulatory body for all aviation related activities in Bangladesh.<br /> 
+                                it is also the aeronautical service provider and is responsible for safe, expeditious and efficient flow <br />
+                                of air traffic within the Flight Information Region (FIR) bounded by the International geographic <br />
+                                boundary of Bangladesh. This organization is the custodian of all airfields and<br />
+                                allied facilities including air navigation facilities.</p>
+                            <p class="btn_cont">
+                                <a href="#" class="details">Read More</a>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -235,8 +241,8 @@
         <div class="section services">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-4">
-                        <div class="item">
+                    <div class="full_480 col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                        <div class="item sj" data-animate="fadeInUp" data-animation-delay="200">
                             <div class="icon">
                                 <img src="images/icon_introduction.png" alt="" />
                             </div>
@@ -250,8 +256,8 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-lg-4">
-                        <div class="item">
+                    <div class="full_480 col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                        <div class="item sj" data-animate="fadeInUp" data-animation-delay="300">
                             <div class="icon">
                                 <img src="images/icon_introduction.png" alt="" />
                             </div>
@@ -265,8 +271,8 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-lg-4">
-                        <div class="item">
+                    <div class="full_480 col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                        <div class="item sj" data-animate="fadeInUp" data-animation-delay="400">
                             <div class="icon">
                                 <img src="images/icon_introduction.png" alt="" />
                             </div>
@@ -280,8 +286,8 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-lg-4">
-                        <div class="item">
+                    <div class="full_480 col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                        <div class="item sj" data-animate="fadeInUp" data-animation-delay="500">
                             <div class="icon">
                                 <img src="images/icon_introduction.png" alt="" />
                             </div>
@@ -295,8 +301,8 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-lg-4">
-                        <div class="item">
+                    <div class="full_480 col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                        <div class="item sj" data-animate="fadeInUp" data-animation-delay="600">
                             <div class="icon">
                                 <img src="images/icon_introduction.png" alt="" />
                             </div>
@@ -310,8 +316,8 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-lg-4">
-                        <div class="item">
+                    <div class="full_480 col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                        <div class="item sj" data-animate="fadeInUp" data-animation-delay="700">
                             <div class="icon">
                                 <img src="images/icon_introduction.png" alt="" />
                             </div>
@@ -334,8 +340,8 @@
             <div class="footer_top">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-2">
-                            <div class="item site_info">
+                        <div class="full_570 col-xs-6 col-sm-6 col-md-3 col-lg-2">
+                            <div class="item site_info sj" data-animate="fadeInUp" data-animation-delay="200">
                                 <h3>Site information</h3>
                                 <ul>
                                     <li><a href="#">Regulatory philosophy</a></li>
@@ -350,8 +356,8 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-lg-3">
-                            <div class="item contact_us">
+                        <div class="full_570 col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                            <div class="item contact_us sj" data-animate="fadeInUp" data-animation-delay="300">
                                 <h3>Contact us</h3>
                                 <ul>
                                     <li>
@@ -383,8 +389,8 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-lg-4">
-                            <div class="item notice_board">
+                        <div class="full_570 col-xs-6 col-sm-6 col-md-3 col-lg-4">
+                            <div class="item notice_board sj" data-animate="fadeInUp" data-animation-delay="400">
                                 <h3>Notice Board</h3>
                                 <ul>
                                     <li>
@@ -399,8 +405,8 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-lg-3">
-                            <div class="item emergency_contact">
+                        <div class="full_570 col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                            <div class="item emergency_contact sj" data-animate="fadeInUp" data-animation-delay="500">
                                 <h3>Emergency Complain</h3>
                                 <form action="">
                                     <div class="form-group">
@@ -425,12 +431,12 @@
             <div class="footer_last">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="full_570 col-xs-6">
                             <div class="copy_message">
                                 Copyright &copy; 2006 Civil Aviation Authority, Bangladesh. All rights reserved.
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="full_570 col-xs-6">
                             <div class="social_icons">
                                 <ul>
                                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -451,5 +457,22 @@
 
     <!-- Bootstrap JS v3.3.7-->
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- JS for Core Waypoint -->
+    <script src="js/waypoints.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            /*========== Code for waypoint ==========*/
+            $('.sj').waypoint(function() {
+                var anim = $(this).attr('data-animate'),
+                        del = $(this).attr('data-animation-delay');
+                dur = $(this).attr('data-animation-duration');
+                $(this).addClass('animated ' + anim).css({
+                    animationDelay: del + 'ms',
+                    animationDuration: dur + 'ms'
+                });
+            }, {offset: '100%', triggerOnce: true});
+        })
+    </script>
 </body>
 </html>
