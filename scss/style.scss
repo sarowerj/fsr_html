@@ -35,6 +35,13 @@ $roboto_con : 'Roboto Condensed', sans-serif;
     -o-transition:$property $duration;
     transition:$property $duration;
 }
+@mixin border_radius($t,$r,$b,$l){
+    -webkit-border-radius:$t $r $b $l;
+    -moz-border-radius:$t $r $b $l;
+    -ms-border-radius:$t $r $b $l;
+    -o-border-radius:$t $r $b $l;
+    border-radius:$t $r $b $l;
+}
 
 /*========== Global Css ==========*/
 body{
@@ -80,8 +87,61 @@ p{
 }
 .form-control{
     border-radius: 0;
-}
-/*== End Global Css==*/
+}/*== End Global Css==*/
+
+
+
+/*========== Social Icons ==========*/
+.social_icons{
+    ul{
+        margin:0;
+        padding:0;
+        li{
+            display: inline-block;
+            a{
+                display:block;
+                text-align: center;
+                color:white;
+                @include transition(all,.25s);
+                .fa{
+                    width:40px;
+                    height:40px;
+                    padding:13px;
+                    @include border_radius(50%,50%,50%,50%);
+                    display:block;
+                    &.fa-facebook{
+                        background:#3b5998;
+                    }
+                    &.fa-twitter{
+                        background:#1da1f2;
+                    }
+                    &.fa-google-plus{
+                        background:#db4437;
+                    }
+                    &.fa-pinterest{
+                        background:#cd2129;
+                    }
+                    &.fa-instagram{
+                        background:#2f689b;
+                    }
+                    &.fa-youtube{
+                        background:#bb2025;
+                    }
+                    &.fa-linkedin{
+                        background:#117bb8;
+                    }
+                }
+                &:hover{
+                    color:white;
+                }
+            }
+        }
+    }
+}/*== End Social Icons ==*/
+
+
+
+
 /*========== Header Start Here ==========*/
 header{ 
     background:$base_color_lt;
@@ -108,7 +168,7 @@ header{
             color:white;
         }
         h2{
-            font-size:29.5px;
+            font-size:27px;
             margin:6px 0 0 0;
             font-family: 'SolaimanLipi';
             color:white;
@@ -408,107 +468,126 @@ header{
 footer{
     background:darken($base_color,2%);
     color:#87a2be;
-    padding:70px 0 0 0;
-    .item{
-        h3{
-            margin: 0 0 10px 0;
-            font-size: 22px;
-            color:#a5afba;
-            padding-bottom: 5px;
-            border-bottom: 1px solid #092949;
-        }
-        ul{
-            padding:0;
-            li{
-                list-style: none;
+    .footer_top{
+        border-bottom: 1px solid #000e1b;
+        padding:70px 0 70px 0;
+        .item{
+            h3{
+                margin: 0 0 10px 0;
+                font-size: 22px;
+                color:#a5afba;
+                padding-bottom: 5px;
+                border-bottom: 1px solid #092949;
+            }
+            ul{
+                padding:0;
+                li{
+                    list-style: none;
 
-                a{
-                    @include transition(all,.25s);
-                    &:hover{
-                        color:white;
-                    }
-                }
-            }
-        }
-        &.site_info{
-            line-height: 23px;
-        }
-        &.contact_us{
-            ul{
-                li{
-                    line-height: 20px;
-                    margin-bottom: 10px;
-                    padding: 0 0 0 90px;
-                    position:relative;
-                    .fa{
-                        position:absolute;
-                        left:0;
-                        top:0;
-                        padding-top:1px;
-                        width:20px;
-                        height:20px;
-                        &.fa-mobile{
-                            font-size: 21px;
-                            top: -2px;
-                        }
-                        &.fa-fax{
-                            font-size:12px;
-                        }
-                        &.fa-envelope{
-                            font-size:12px;
-                            top: 2px;
-                        }
-                    }
-                    .title{
-                        position:absolute;
-                        left:15px;
-                        top:0;
-                        width:70px;
-                        height:30px;
-                        font-weight: 700;
-                        &::after{
-                            content:':';
-                            right:-3px;
-                            position:absolute;
-                        }
-                    }
-                }
-            }
-        }
-        &.notice_board{
-            text-align: justify;
-            ul{
-                li{
-                    margin-bottom: 10px;
-                    line-height:18px;
                     a{
-                        font-weight: 700;
+                        @include transition(all,.25s);
+                        &:hover{
+                            color:white;
+                        }
+                    }
+                }
+            }
+            &.site_info{
+                line-height: 23px;
+            }
+            &.contact_us{
+                ul{
+                    li{
+                        line-height: 20px;
+                        margin-bottom: 10px;
+                        padding: 0 0 0 90px;
+                        position:relative;
+                        .fa{
+                            position:absolute;
+                            left:0;
+                            top:0;
+                            padding-top:1px;
+                            width:20px;
+                            height:20px;
+                            &.fa-mobile{
+                                font-size: 21px;
+                                top: -2px;
+                            }
+                            &.fa-fax{
+                                font-size:12px;
+                            }
+                            &.fa-envelope{
+                                font-size:12px;
+                                top: 2px;
+                            }
+                        }
+                        .title{
+                            position:absolute;
+                            left:15px;
+                            top:0;
+                            width:70px;
+                            height:30px;
+                            font-weight: 700;
+                            &::after{
+                                content:':';
+                                right:-3px;
+                                position:absolute;
+                            }
+                        }
+                    }
+                }
+            }
+            &.notice_board{
+                text-align: justify;
+                ul{
+                    li{
+                        margin-bottom: 10px;
+                        line-height:18px;
+                        a{
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+            &.emergency_contact{
+                .form-control{
+                    background:#07233f;
+                    border:1px solid #0b2f53;
+                    box-shadow: 1px 1px 0px #001225;
+                    @include transition(all,.25s);
+                    &::-webkit-input-placeholder {
+                        color: #87a2be;
+                    }
+                    &:focus{
+                        background:#0b2f53;
+                    }
+                }
+                .btn-primary{
+                    height:36px;
+                    background:#0b2f53;
+                    border: 1px solid #0c457e;
+                    @include transition(all,.25s);
+                    color:white;
+                    &:hover{
+                        background:#0c457e;
                     }
                 }
             }
         }
-        &.emergency_contact{
-            .form-control{
-                background:#07233f;
-                border:1px solid #0b2f53;
-                box-shadow: 1px 1px 0px #001225;
-                @include transition(all,.25s);
-                &::-webkit-input-placeholder {
-                    color: #87a2be;
-                }
-                &:focus{
-                background:#0b2f53;
-                }
-            }
-            .btn-primary{
-                height:36px;
-                background:#0b2f53;
-                border: 1px solid #0c457e;
-                @include transition(all,.25s);
-                color:white;
-                &:hover{
-                    background:#0c457e;
-                }
+    }
+
+    .footer_last{
+        background:#001224;
+        border-top:1px solid #012242;
+        padding:10px;
+        color:#87a2be;
+        .copy_message{
+            margin-top: 25px;
+        }
+        .social_icons{
+            margin:10px 0;
+            ul{
+                text-align:right;
             }
         }
     }
