@@ -78,6 +78,9 @@ h1{
 p{
     color:#333333;
 }
+.form-control{
+    border-radius: 0;
+}
 /*== End Global Css==*/
 /*========== Header Start Here ==========*/
 header{ 
@@ -102,11 +105,13 @@ header{
             font-weight: 400;
             border-bottom: 1px solid #3d4e74;
             padding-bottom:5px;
+            color:white;
         }
         h2{
             font-size:29.5px;
             margin:6px 0 0 0;
             font-family: 'SolaimanLipi';
+            color:white;
         }
     }
 
@@ -391,6 +396,119 @@ header{
                 background: -moz-radial-gradient(center, ellipse cover,  #FFFFFF 0%, #c5d3eb 00%);
                 background: -webkit-radial-gradient(center, ellipse cover,  #FFFFFF 0%,#c5d3eb 0%);
                 background: radial-gradient(ellipse at center,  #FFFFFF 0%,#c5d3eb 00%);
+            }
+        }
+    }
+}/*== End Services ==*/
+
+
+
+
+/*========= Footer Section ==========*/
+footer{
+    background:darken($base_color,2%);
+    color:#87a2be;
+    padding:70px 0 0 0;
+    .item{
+        h3{
+            margin: 0 0 10px 0;
+            font-size: 22px;
+            color:#a5afba;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #092949;
+        }
+        ul{
+            padding:0;
+            li{
+                list-style: none;
+
+                a{
+                    @include transition(all,.25s);
+                    &:hover{
+                        color:white;
+                    }
+                }
+            }
+        }
+        &.site_info{
+            line-height: 23px;
+        }
+        &.contact_us{
+            ul{
+                li{
+                    line-height: 20px;
+                    margin-bottom: 10px;
+                    padding: 0 0 0 90px;
+                    position:relative;
+                    .fa{
+                        position:absolute;
+                        left:0;
+                        top:0;
+                        padding-top:1px;
+                        width:20px;
+                        height:20px;
+                        &.fa-mobile{
+                            font-size: 21px;
+                            top: -2px;
+                        }
+                        &.fa-fax{
+                            font-size:12px;
+                        }
+                        &.fa-envelope{
+                            font-size:12px;
+                            top: 2px;
+                        }
+                    }
+                    .title{
+                        position:absolute;
+                        left:15px;
+                        top:0;
+                        width:70px;
+                        height:30px;
+                        font-weight: 700;
+                        &::after{
+                            content:':';
+                            right:-3px;
+                            position:absolute;
+                        }
+                    }
+                }
+            }
+        }
+        &.notice_board{
+            text-align: justify;
+            ul{
+                li{
+                    margin-bottom: 10px;
+                    line-height:18px;
+                    a{
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+        &.emergency_contact{
+            .form-control{
+                background:#07233f;
+                border:1px solid #0b2f53;
+                box-shadow: 1px 1px 0px #001225;
+                @include transition(all,.25s);
+                &::-webkit-input-placeholder {
+                    color: #87a2be;
+                }
+                &:focus{
+                background:#0b2f53;
+                }
+            }
+            .btn-primary{
+                height:36px;
+                background:#0b2f53;
+                border: 1px solid #0c457e;
+                @include transition(all,.25s);
+                color:white;
+                &:hover{
+                    background:#0c457e;
+                }
             }
         }
     }

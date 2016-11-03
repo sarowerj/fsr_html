@@ -330,7 +330,96 @@
         </div>
         <!-- End Services -->
 
-
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2">
+                        <div class="item site_info">
+                            <h3>Site information</h3>
+                            <ul>
+                                <li><a href="#">Regulatory philosophy</a></li>
+                                <li><a href="#">Accessibility</a></li>
+                                <li><a href="#">Complaints</a></li>
+                                <li><a href="#">Copyright</a></li>
+                                <li><a href="#">FOI</a></li>
+                                <li><a href="#">Privacy</a></li>
+                                <li><a href="#">Site information</a></li>
+                                <li><a href="#">Subscribe</a></li>
+                                <li><a href="#">Contact us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="item contact_us">
+                            <h3>Contact us</h3>
+                            <ul>
+                                <li>
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                    <span class="title">Address</span>
+                                    <span class="text">Civil Aviation Head Quarter, Kurmitola, Dhaka-1209</span>
+                                </li>
+                                <li>
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                    <span class="title">Telephone</span>
+                                    <span class="text">+88 02 000 000 <br />+88 02 000 000</span>
+                                </li>
+                                <li>
+                                    <i class="fa fa-fax" aria-hidden="true"></i>
+                                    <span class="title">Fax</span>
+                                    <span class="text">+88 02 000 000</span>
+                                </li>
+                                <li>
+                                    <i class="fa fa-mobile" aria-hidden="true"></i>
+                                    <span class="title">Mobile</span>
+                                    <span class="text">+88 02 000 000</span>
+                                </li>
+                                <li>
+                                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                                    <span class="title">Email</span>
+                                    <span class="text">pro@caab.gov.bd</span>
+                                    <span class="text">pro@caab.gov.bd</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="item notice_board">
+                            <h3>Notice Board</h3>
+                            <ul>
+                                <li>
+                                    <strong>18 August 2016 :</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco  <a href="#">Details</a>
+                                </li>
+                                <li>
+                                    <strong>18 August 2016 :</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labor nostrud exercitation ullamco  <a href="#">Details</a>
+                                </li>
+                                <li>
+                                    <strong>18 August 2016 :</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labor nostrud exercitation ullamco <a href="#">Details</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="item emergency_contact">
+                            <h3>Emergency Complain</h3>
+                            <form action="">
+                                <div class="form-group">
+                                    <input type="text" name="email" class="form-control" placeholder="Email"/>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="email" class="form-control" placeholder="Phone"/>
+                                </div>
+                                <div class="form-group">
+                                    <textarea name="message" class="form-control" placeholder="Message"></textarea>
+                                </div>
+                                <div class="form-group text-right">
+                                    <input type="submit" value="Send" class="btn btn-primary" />
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
     </main><!-- End Main Content-->
 
