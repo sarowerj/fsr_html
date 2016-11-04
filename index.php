@@ -34,7 +34,37 @@
         <header>
             <div class="container">
                 <div class="row">
-                    <div class="col-xs-7">
+                    <div class="col-xs-12 col-sm-4 col-md-offset-1 pull-right">
+                        <ul class="top_nav_bar hidden-xs">
+                            <li><a href="#">About CAAB</a></li>
+                            <li><a href="#">Jobs</a></li>
+                            <li><a href="#">News</a></li>
+                            <li><a href="#">Log In</a></li>
+                        </ul>
+                        <div class="search_form">
+                            <div class="side_menu visible-xs">
+                                <button type="button" class="" data-menu-of="left">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+                            <form action="#">
+                                <input type="text" name="search_fld" placeholder="Type to search" />
+                                <input type="submit" value="Search" />
+                                <i class="fa fa-caret-down" aria-hidden="true"></i>
+                                <i class="fa fa-search"></i>
+                            </form>
+                            <div class="side_menu visible-xs right">
+                                <button type="button" class="" data-menu-of="right">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-8 col-md-7">
                         <div class="logo">
                             <a href="index.php"><img src="images/fsr-logo.png" alt="" /></a>
                         </div>
@@ -47,37 +77,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xs-4 col-lg-offset-1">
-                        <ul class="top_nav_bar">
-                            <li><a href="#">About CAAB</a></li>
-                            <li><a href="#">Jobs</a></li>
-                            <li><a href="#">News</a></li>
-                            <li><a href="#">Log In</a></li>
-                        </ul>
-                        <div class="search_form">
-                            <form action="#">
-                                <input type="text" name="search_fld" placeholder="Type to search" />
-                                <input type="submit" value="Search" />
-                                <i class="fa fa-caret-down" aria-hidden="true"></i>
-                                <i class="fa fa-search"></i>
-                            </form>
-                        </div>
-                    </div>
                 </div>
             </div>
 
-            <nav class="navbar navbar-default">
+            <nav class="navbar navbar-default hidden-xs">
                 <div class="container">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main_nav" data-aria-expanded="false">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                    </div>
-
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="main_nav">
                         <ul class="nav navbar-nav">
@@ -145,18 +149,8 @@
         </div><!-- End Slider-->
 
         <!-- Start 2nd Navbar-->
-        <nav class="navbar navbar-default">
+        <nav class="navbar navbar-default hidden-xs">
             <div class="container">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main_nav_2">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-
                 <div class="collapse navbar-collapse" id="main_nav_2">
                     <ul class="nav navbar-nav">
                         <li><a href="#">Home</a></li>
@@ -180,18 +174,8 @@
         </nav><!-- End 2nd Navbar-->
 
         <!-- Start 3rd Navbar-->
-        <nav class="navbar navbar-default navbar_light">
+        <nav class="navbar navbar-default navbar_light hidden-xs">
             <div class="container">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main_nav_3" data-aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-
                 <div class="collapse navbar-collapse" id="main_nav_3">
                     <ul class="nav navbar-nav">
                         <li><a href="#">Home</a></li>
@@ -454,6 +438,34 @@
 
     </main><!-- End Main Content-->
 
+    <div class="mobile_menu left">
+        <div class="menu_content">
+            <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">Home</a></li>
+                            <li><a href="#">Individuals</a></li>
+                            <li><a href="#">Operations</a></li>
+                            <li><a href="#">Airworthiness</a></li>
+                            <li><a href="#">Regulations & Policy</a></li>
+                            <li><a href="#">Licenses & Certificates</a></li>
+                            <li><a href="#">Training & Testing</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-role="button" aria-haspopup="true" data-aria-expanded="false">About FSR</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+        </div>
+    </div>
+    <div class="mobile_menu right">
+        <div class="menu_content">
+            <h1>aklfjdaf</h1>
+            <h1>aklfjdaf</h1> 
+        </div>
+    </div>
+
 
     <!-- Bootstrap JS v3.3.7-->
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -472,6 +484,14 @@
                     animationDuration: dur + 'ms'
                 });
             }, {offset: '100%', triggerOnce: true});
+
+
+            $('.side_menu button').click(function() {
+                $(this).toggleClass('opened');
+                $('body').toggleClass('mobile_menu_opened');
+                var menu_of = $(this).attr('data-menu-of');
+                $('body').toggleClass(menu_of);
+            })
         })
     </script>
 </body>

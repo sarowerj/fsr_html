@@ -44,10 +44,34 @@ $roboto_con : 'Roboto Condensed', sans-serif;
 }
 
 /*========== Global Css ==========*/
+html{
+    overflow-x: hidden;
+}
 body{
     font-family: $roboto;
     font-size:14px;
     line-height: 21px;
+    @include transition(margin,.25s);
+    &.mobile_menu_opened{
+        &.left{
+            margin-left: 250px;
+            margin-right: -250px;
+            .mobile_menu{
+                &.left{
+                    left:0;
+                }
+            }
+        }
+        &.right{
+            margin-right: 250px;
+            margin-left: -250px;
+            .mobile_menu{
+                &.right{
+                    right:0;
+                }
+            }
+        }
+    }
 }
 a{
     color:inherit;
@@ -91,6 +115,95 @@ p{
 .form-control{
     border-radius: 0;
 }/*== End Global Css==*/
+
+
+
+/*========== Mobile Menu ==========*/
+.side_menu{
+    width:36px;
+    height:36px;
+    float:left;
+    margin-right:4px;
+    button{
+        display:block;
+        width:100%;
+        height:100%;
+        border: 0;
+        background:#233c74;
+        padding:12px 7px;
+        .icon-bar{
+            width:100%;
+            height:2px;
+            background:white;
+            display: block;
+            margin-bottom:4px;
+            @include transition(transform,.25s);
+        }
+        &:focus{
+            outline:none;
+        }
+        &.opened{
+            padding:17px 7px;
+            .icon-bar{
+                &:nth-child(1){
+                    transform:rotate(-45deg) scale(.6,1);
+                    transform-origin: left;
+                    margin-bottom: -2px;
+                }
+                &:nth-child(3){
+                    transform:rotate(45deg)scale(.6,1);
+                    transform-origin: left;
+                    margin-top: -6px;
+                }
+            }
+        }
+    }
+    &.right{
+        float:right;
+        margin:0 0 0 4px;
+        button{
+            &.opened{
+                .icon-bar{
+                    &:nth-child(1){
+                        transform:rotate(45deg) scale(.6,1);
+                        transform-origin: right;
+                        margin-bottom: -2px;
+                    }
+                    &:nth-child(3){
+                        transform:rotate(-45deg)scale(.6,1);
+                        transform-origin: right;
+                        margin-top: -6px;
+                    }
+                }
+            }
+        }
+    }
+}
+.mobile_menu{
+    background:red;
+    position: fixed;
+    top:0;
+    bottom:0;
+    width:250px;
+    z-index: 100;
+    overflow:hidden;
+    @include transition(all, .25s);
+    &.right{
+        right:-270px;
+        left:auto;
+    }
+    &.left{
+        left:-270px;
+        right:auto;
+    }
+    .menu_content{
+        width:calc(100% + 20px);
+        height:100%;
+        position:relative;
+        overflow-y: scroll;
+    }
+}
+/*== End Menu Icon ==*/
 
 
 
@@ -201,15 +314,13 @@ header{
 
     .search_form{
         margin-top: 37px;
-        background:#233c74;
         position:relative;
         input[type="text"]{
             border:0;
             height:36px;
             width:100%;
-            max-width: 250px;
-            background:transparent;
-            padding-left:10px;
+            background:#233c74;
+            padding:0 70px 0 10px;
             &::-webkit-input-placeholder {
                 color: #5972aa;
             }
@@ -220,11 +331,12 @@ header{
         input[type="submit"]{
             width:36px;
             height:36px;
-            float:right;
             border:0;
-            position:relative;
+            position:absolute;
             z-index: 2;
             opacity:0;
+            right:0;
+            top:0;
         }
         .fa-search{
             position: absolute;
@@ -240,7 +352,9 @@ header{
             height:36px;
             padding:10px;
             text-align: center;
-            float:right;
+            position:absolute;
+            top:0;
+            right:36px;
             cursor: pointer;
         }
     }
@@ -602,6 +716,41 @@ footer{
 
 /*========= Responsive Css ==========*/
 @media screen and (max-width:1199px){
+    header{
+        .logo{
+            max-width: 150px;
+            img{
+                width:100%;
+            }
+        }
+        .top_nav_bar{
+            li{
+                a{
+                    padding:13px 12px;
+                }
+            }
+        }
+        .office_name{
+            h1{
+                font-size:25px;
+            }
+            h2{
+                font-size:23px;
+            }
+        }
+    }
+    .navbar{
+        .navbar-collapse{
+            padding:0;
+        }
+        .nav{
+            > li{
+                > a{
+                    padding: 15px 18px;
+                }
+            }
+        }
+    }
     .welcome_text{
         .content{
             br{
@@ -617,12 +766,119 @@ footer{
         }
     }
 }
+
+
+@media screen and (max-width:991px){
+    .navbar{
+        .nav{
+            > li{
+                > a{
+                    padding: 15px 10px;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+    header{
+        .logo{
+            max-width: 120px;
+        }
+        .office_name{
+            margin-top:41px;
+            h1{
+                font-size:22px;
+            }
+            h2{
+                font-size:20px;
+            }
+        }
+        .top_nav_bar{
+            li{
+                a{
+                    padding: 13px 6px;
+                    font-size: 14px;
+                }
+            }
+        }
+        .search_form{
+            margin-top: 12px;
+        }
+    }
+
+    .slider{
+        .carousel{
+            .carousel-inner{
+                .item {
+                    >img{
+                        height: 270px;
+                        width: auto;
+                        max-width: initial;
+                    }
+                }
+            }
+        }
+    }
+} 
+
+
+@media screen and (max-width:767px){
+    .section{
+        padding:30px 0;
+        &.services{
+            padding-bottom:0;
+        }
+    }
+    header{
+        .search_form{
+            margin:0;
+            &::after{
+                content:' ';
+                display:table;
+                clear: both;
+            }
+            form{
+                float:left;
+                width:calc(100% - 80px);
+                position:relative;
+            }
+        }
+    }
+    .slider{
+        .carousel{
+            .carousel-inner{
+                .item{
+                    .carousel-caption{
+                        .text{
+                            h5{
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    footer{
+        .footer_top{
+            padding:30px 0 0;
+        }
+    }
+}
 @media screen and (max-width:570px){
     h1{
         font-size:22px;
     }
     .full_570{
         width:100%;
+    }
+
+    header{
+        .logo{
+            max-width: 100px;
+        }
+        .office_name{
+            margin: 30px 0 0 0;
+        }
     }
     footer{
         .footer_last{
@@ -640,5 +896,41 @@ footer{
 @media screen and (max-width:480px){
     .full_480{
         width:100%;
+    }
+    header{
+        .logo{
+            float:none;
+            margin: auto;
+        }
+        .office_name{
+            float:none;
+            margin: 20px auto;
+            text-align:center;
+            padding:0;
+        }
+    }
+
+
+    .slider{
+        .carousel{
+            .carousel-inner{
+                .item{
+                    >img{
+                        height:160px;
+                    }
+                    .btn_cont{
+                        display: none;
+                    }
+                    .carousel-caption{
+                        bottom:0;
+                        .text{
+                            h3{
+                                font-size: 17px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
