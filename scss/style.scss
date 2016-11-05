@@ -180,13 +180,14 @@ p{
     }
 }
 .mobile_menu{
-    background:red;
+    background:$base_color;
     position: fixed;
     top:0;
     bottom:0;
     width:250px;
     z-index: 100;
     overflow:hidden;
+    color: white;
     @include transition(all, .25s);
     &.right{
         right:-270px;
@@ -201,6 +202,56 @@ p{
         height:100%;
         position:relative;
         overflow-y: scroll;
+        padding:0 15px;
+        .nav{
+            margin-top:0;
+            li{
+                a{
+                    background:$base_color_lt;
+                    border-bottom: 1px solid $base_color;
+                    border-top: 1px solid $base_color_lt_hover;
+                    @include transition(all,.25s);
+                    &:hover,&:focus{
+                        background:$base_color_lt_hover;
+                        color:white;
+                    }
+                }
+                &.dropdown{
+                    >a{
+                        position:relative;
+                        &::after{
+                            content: '';
+                            position: absolute;
+                            right:35px;
+                            top:18px;
+                            border-right:5px solid transparent;
+                            border-top:5px solid white;
+                            border-bottom:5px solid transparent;
+                            border-left:5px solid transparent;
+                        }
+                    }
+                    &.open{
+                        >a{
+                            &::after{
+                                top:12px;
+                                border-right:5px solid transparent;
+                                border-top:5px solid transparent;
+                                border-bottom:5px solid white;
+                                border-left:5px solid transparent;
+                            }
+                        }
+                    }
+                    .dropdown-menu{
+                        padding:0;
+                        li{
+                            a{
+                                color:white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 /*== End Menu Icon ==*/
@@ -900,7 +951,7 @@ footer{
     header{
         .logo{
             float:none;
-            margin: auto;
+            margin:20px auto 0;
         }
         .office_name{
             float:none;

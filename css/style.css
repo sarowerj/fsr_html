@@ -133,13 +133,14 @@ p {
       margin-top: -6px; }
 
 .mobile_menu {
-  background: red;
+  background: #0c1c40;
   position: fixed;
   top: 0;
   bottom: 0;
   width: 250px;
   z-index: 100;
   overflow: hidden;
+  color: white;
   -webkit-transition: all 0.25s;
   -moz-transition: all 0.25s;
   -ms-transition: all 0.25s;
@@ -155,7 +156,43 @@ p {
     width: calc(100% + 20px);
     height: 100%;
     position: relative;
-    overflow-y: scroll; }
+    overflow-y: scroll;
+    padding: 0 15px; }
+    .mobile_menu .menu_content .nav {
+      margin-top: 0; }
+      .mobile_menu .menu_content .nav li a {
+        background: #0f2351;
+        border-bottom: 1px solid #0c1c40;
+        border-top: 1px solid #132d66;
+        -webkit-transition: all 0.25s;
+        -moz-transition: all 0.25s;
+        -ms-transition: all 0.25s;
+        -o-transition: all 0.25s;
+        transition: all 0.25s; }
+        .mobile_menu .menu_content .nav li a:hover, .mobile_menu .menu_content .nav li a:focus {
+          background: #132d66;
+          color: white; }
+      .mobile_menu .menu_content .nav li.dropdown > a {
+        position: relative; }
+        .mobile_menu .menu_content .nav li.dropdown > a::after {
+          content: '';
+          position: absolute;
+          right: 35px;
+          top: 18px;
+          border-right: 5px solid transparent;
+          border-top: 5px solid white;
+          border-bottom: 5px solid transparent;
+          border-left: 5px solid transparent; }
+      .mobile_menu .menu_content .nav li.dropdown.open > a::after {
+        top: 12px;
+        border-right: 5px solid transparent;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid white;
+        border-left: 5px solid transparent; }
+      .mobile_menu .menu_content .nav li.dropdown .dropdown-menu {
+        padding: 0; }
+        .mobile_menu .menu_content .nav li.dropdown .dropdown-menu li a {
+          color: white; }
 
 /*== End Menu Icon ==*/
 /*========== Social Icons ==========*/
@@ -633,7 +670,7 @@ footer {
 
   header .logo {
     float: none;
-    margin: auto; }
+    margin: 20px auto 0; }
   header .office_name {
     float: none;
     margin: 20px auto;
